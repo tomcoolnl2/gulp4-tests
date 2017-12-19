@@ -1,0 +1,25 @@
+include ../mixins/_svgsprite.pug
+
+doctype html
+html(class="no-js" lang="nl-NL")
+    head
+        meta(charset="utf-8")
+
+        //- Use this in the templates to pre-/append for example a title element or an extra stylesheet
+        block html-head
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            meta(name="description", content="")
+            link(href="static/css/main.css", rel="stylesheet")
+
+    body
+        block page-header
+            include ../components/page-header.pug
+
+        //- no include here because it's content is filled via the page templates in stead of being static like the header and footer
+        main.page-main(role="main")
+            block page-main
+
+        block page-footer
+            include ../components/page-footer.pug
+
+        script(src="static/js/main.js")

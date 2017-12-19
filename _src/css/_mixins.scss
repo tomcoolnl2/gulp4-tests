@@ -1,0 +1,33 @@
+/*
+    Mixins
+    Globally used mixins and functions should be placed here. Specific mixins should be placed in the partial where they make sense, e.g. an icon font mixin inside the typography partial.
+*/
+
+/*
+    Mixin: Breakpoints
+    Used for naming our media queries and therefore easier use of media queries.
+
+    Usage:
+    @include bp-sm{
+        .titanic{
+            float: none;
+        }
+    }
+*/
+@mixin bp-sm{
+    @media only screen and (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin bp-md{
+    @media only screen and (min-width: 992px){
+        @content;
+    }
+}
+
+@mixin bp-lg{
+    @media only screen and (min-width: 1200px){
+        @content;
+    }
+}

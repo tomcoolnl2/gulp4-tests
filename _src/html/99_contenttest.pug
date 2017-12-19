@@ -1,0 +1,83 @@
+extends layouts/base.pug
+prepend html-head
+    title 99: Content test page
+
+block page-main
+    .container
+        .row
+            .col-xs-12
+                h1 Content test page
+                p This page contains some elements seen throughout the site. You can use this page to test if these elements are styled properly.
+
+                h1 Heading 1
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque beatae corporis laborum provident, voluptatem error eos qui perferendis numquam necessitatibus, nostrum ea quasi nihil dicta blanditiis natus nobis ad magni!
+                p Amet incidunt ut reiciendis quaerat hic, similique itaque, veniam.
+
+                h2 Heading 2
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque beatae corporis laborum provident, voluptatem error eos qui perferendis numquam necessitatibus, nostrum ea quasi nihil dicta blanditiis natus nobis ad magni!
+                p Amet incidunt ut reiciendis quaerat hic, similique itaque, veniam.
+
+                h3 Heading 3
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque beatae corporis laborum provident, voluptatem error eos qui perferendis numquam necessitatibus, nostrum ea quasi nihil dicta blanditiis natus nobis ad magni!
+                p Amet incidunt ut reiciendis quaerat hic, similique itaque, veniam.
+
+                h4 Heading 4
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque beatae corporis laborum provident, voluptatem error eos qui perferendis numquam necessitatibus, nostrum ea quasi nihil dicta blanditiis natus nobis ad magni!
+                p Amet incidunt ut reiciendis quaerat hic, similique itaque, veniam.
+
+                h5 Heading 5
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque beatae corporis laborum provident, voluptatem error eos qui perferendis numquam necessitatibus, nostrum ea quasi nihil dicta blanditiis natus nobis ad magni!
+                p Amet incidunt ut reiciendis quaerat hic, similique itaque, veniam.
+
+                h6 Heading 6
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque beatae corporis laborum provident, voluptatem error eos qui perferendis numquam necessitatibus, nostrum ea quasi nihil dicta blanditiis natus nobis ad magni!
+                p Amet incidunt ut reiciendis quaerat hic, similique itaque, veniam.
+
+
+                h2 Inline text styles
+                p Lorem ipsum dolor #[a(href='#') A: sit amet], consectetur adipisicing elit. #[strong STRONG: Nostrum magnam] incidunt autem #[em EM: ipsum numquam odit] hic, delectus laborum architecto #[s S: convallis est] dolor natus dignissimos, earum, nesciunt #[sup SUP: nisi dolor] repudiandae iure dolores porro #[sub SUB: lacinia] laudantium. Pariatur alias, ab mollitia provident nesciunt #[abbr(title='Ministerie van Buitenlandse Zaken') ABBR: MinBuZa] facilis voluptates ut dignissimos ea #[del DEL: quidem deleniti maiores odio] #[ins INS: deserunt natus nam] fugit. Dolores, sed?
+
+                blockquote "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis enim, provident, illo voluptatibus."
+
+                h2 Lists
+                p: strong Ordered list
+                ol
+                    li List Item 1
+                    li List Item 2
+                    li List Item 3
+                    li
+                        | List item 4
+                        ol
+                            li
+                                | List item 4-1
+                                ol
+                                    li List item 4-1-1
+                                    li List item 4-1-2
+                                li List item 4-2
+                                li List item 4-3
+
+                p: strong Unordered list
+                ul
+                    li List Item 1
+                    li List Item 2
+                    li List Item 3
+                    li
+                        | List item 4
+                        ul
+                            li
+                                | List item 4-1
+                                ul
+                                    li List item 4-1-1
+                                    li List item 4-1-2
+                                li List item 4-2
+                                li List item 4-3
+
+                p: strong Description List
+                dl
+                    dt Description Term
+                    dd Description Details
+                    dt Description Term
+                    dd Description Details
+
+                h2 SVG sprite:
+                +svg('icon-insta','0 0 256 256', 'icon-classname', 256, 256)

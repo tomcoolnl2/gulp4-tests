@@ -1,0 +1,48 @@
+/*
+    Helpers
+    A collection of global helper classes used throughout the website.
+*/
+
+.hidden{display: none !important; visibility: hidden;}
+.visuallyhidden{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.float-left{float: left !important;}
+.float-right{float: right !important;}
+.reset-list{list-style:none; margin:0; padding:0;}
+
+.text--centered{text-align:center;}
+.text--ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.text--noselect{
+    user-select: none;
+}
+.text--nowrap{
+    white-space: nowrap;
+}
+@mixin text--wordwrap{
+    hyphens: auto;
+
+    @supports not(hyphens: auto){
+        word-wrap: break-word;
+    }
+
+    @include bp-md{
+        hyphens: none;
+
+        @supports not(hyphens: auto){
+            word-wrap: normal;
+        }
+    }
+}
+.text--wordwrap{
+    @include text--wordwrap();
+}

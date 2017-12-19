@@ -1,0 +1,14 @@
+//-
+    SVG mixin
+    Use this mixin in your pug to generate a <use>, instantiating an icon from the svg sprite.
+
+    Usage:
+    +svg('symbolID', 'viewbox parameters', 'classnames', 'width attribute', 'height attribute')
+
+mixin svg(id, viewbox, className, width, height)
+    if viewbox
+        svg(viewbox=viewbox, class!=className, width!=width, height!=height)
+            use(xlink:href='/static/img/svg/sprite.svg#' + id)
+    else
+        svg(viewbox='0 0 50 50', class!=className, width!=width, height!=height)
+            use(xlink:href='/static/img/svg/sprite.svg#' + id)

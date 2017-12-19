@@ -1,0 +1,37 @@
+/*
+    main.scss
+    This is the starting point for this project's CSS. This file will be rendered into main.css.
+*/
+
+/******* VARS *******/
+$example-green: #329330;
+
+
+/******* IMPORTS *******/
+@import "3rdparty/_normalize",
+        "3rdparty/_bootstrap",
+        "_mixins",
+        "_helpers",
+        "_typography";
+
+
+/******* MAIN *******/
+*{
+    box-sizing: border-box;
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+body{
+    min-width: 320px;
+}
+.wrap{
+    margin: 0 auto;
+    max-width: 1248px;
+}
+
+
+/******* COMPONENTS *******/
+@import "components/_page-header",
+        "components/_page-footer";
